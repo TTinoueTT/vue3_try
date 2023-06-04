@@ -1,6 +1,6 @@
-[submodule "front_cp"]
-	path = front_cp
+[submodule "front"]
+	path = front
 	url = https://github.com/TTinoueTT/vue3_try_front.git
-[submodule "api_cp"]
-	path = api_cp
+[submodule "api"]
+	path = api
 	url = https://github.com/TTinoueTT/vue3_try_api.git
