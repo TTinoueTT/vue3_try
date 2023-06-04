@@ -1,6 +1,32 @@
 {
+    // エディター全般
+    "workbench.settings.useSplitJSON": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.renderWhitespace": "all",
+    "editor.wordWrapColumn": 700,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.minimap.maxColumn": 30,
+    "diffEditor.wordWrap": "off",
+
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+
     "editor.codeActionsOnSave": {
 
+    },
+
+    // フォーマッター
+    "[scss]": {
+        "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter",
+        "editor.formatOnSave": true
+    },
+    "[typescript][html][vue][json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
     },
 
     "[vue]": {
@@ -9,7 +35,7 @@
         // "editor.wordWrap": "off",
     },
 
-    "editor.minimap.maxColumn": 40,
+
     "ruby.intellisense": "rubyLocate", // メソッドのリンク遷移
 
     "[markdown]": {
@@ -23,10 +49,7 @@
     },
     "markdownlint.run": "onSave",
 
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-    },
+
     "json.indent": "4",
     "json.schemas": [
         {
