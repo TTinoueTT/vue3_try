@@ -1,0 +1,4 @@
+.env*
+# db-store
+db-store/*
+# db-store/*/*

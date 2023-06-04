@@ -1,0 +1,40 @@
+{
+    "editor.codeActionsOnSave": {
+
+    },
+
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        // "editor.wordWrap": "off",
+    },
+
+    "editor.minimap.maxColumn": 40,
+    "ruby.intellisense": "rubyLocate", // メソッドのリンク遷移
+
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        // "editor.quickSuggestions": true,
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+        // "editor.formatOnPaste": true
+        "editor.codeActionsOnSave": {
+            "source.fixAll.markdownlint": true
+        }
+    },
+    "markdownlint.run": "onSave",
+
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
+    "json.indent": "4",
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/myfile"
+            ],
+            "url": "schemaURL"
+        }
+
+    ]
+}

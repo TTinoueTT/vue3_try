@@ -1,0 +1,63 @@
+version: '3.9'
+
+services:
+  db:
+    # platform: linux/amd64
+    image: mysql:8.0
+    environment: # コンテナで利用する環境変数の定義
+      # MySQLインスタンスに必須な値、rootアカウントに設定するためのパスワードを指定
+      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+      # イメージ作成時のデータベース名。
+      # 指定することでMYSQL_USER, MYSQL_PASSWORDは、スーバーユーザ権限のアカウントになる
+      MYSQL_DATABASE: $MYSQL_DATABASE
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_PASSWORD: $MYSQL_PASSWORD
+      # MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      TZ: $TZ
+
+    volumes:
+      - ./db-store:/var/lib/mysql
+      # - ./api/tmp/db:/var/lib/mysql/data
+      - ./conf/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+      - "$DB_PORT:$DB_PORT_CONTAINER_SIDE"
+
+  api:
+    build:
+      context: ./api  # build context の指定 Dockerfile の場所
+      args:
+        WORKDIR: $WORKDIR
+    environment:
+      MYSQL_DATABASE: $MYSQL_DATABASE
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_PASSWORD: $MYSQL_PASSWORD
+      DB_PORT_CONTAINER_SIDE: $DB_PORT_CONTAINER_SIDE
+    volumes:
+      - ./api:/$WORKDIR
+    depends_on:
+      - db
+    ports:
+      - "$API_PORT:$CONTAINER_PORT"
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+
+
+  front:
+    build:
+      context: ./front  # build context の指定 Dockerfile の場所
+      args:
+        WORKDIR: $WORKDIR
+        CONTAINER_PORT: $CONTAINER_PORT
+    # command: pnpm run dev
+    volumes:
+      - ./front:/$WORKDIR
+    ports:
+      - "$FRONT_PORT:$CONTAINER_PORT"
+    depends_on:
+      - api
+
+# networks:
+#   web_segment:
+#     driver: bridge
+#     ipam:
+#       config:
+#       - subnet: 172.180.0.0/24
