@@ -77,19 +77,9 @@ docker compose build api
 docker compose run --rm front pnpx create-vite
 
 
-# package.json で nuxt のバージョンを 3.2 にする
-# docker compose run --rm front sh -c "cd nuxt-app && pnpm install"
-
-# コンテナ起動 nuxt.js のプロジェクト作成、
-# デフォルトでnuxt-app ディレクトリ配下にプロジェクトの中身が作られる
-# 明示的に ディレクトリ名を作成する(後ほど、このプロジェクト名ディレクトリの外に出す)
-
-# mv front/app/{*,.*} front
-# rmdir front/app
-
-# package.json で以下を指定
-# "@types/node": "18.11.9",
-# "nuxt": "^3.4.1"
+# project name → vue3_try
+# vue
+# typescript
 
 docker compose run --rm front sh -c "cd vue3_try && pnpm install"
 
