@@ -74,9 +74,9 @@ docker compose build api
 > コンテナ起動
 
 ```sh
-# docker compose run --rm front npx nuxi init app
+docker compose run --rm front pnpx create-vite
 
-docker compose run --rm front pnpm dlx nuxi init app
+
 # package.json で nuxt のバージョンを 3.2 にする
 # docker compose run --rm front sh -c "cd nuxt-app && pnpm install"
 
@@ -84,16 +84,33 @@ docker compose run --rm front pnpm dlx nuxi init app
 # デフォルトでnuxt-app ディレクトリ配下にプロジェクトの中身が作られる
 # 明示的に ディレクトリ名を作成する(後ほど、このプロジェクト名ディレクトリの外に出す)
 
-mv front/app/{*,.*} front
-rmdir front/app
+# mv front/app/{*,.*} front
+# rmdir front/app
 
 # package.json で以下を指定
 # "@types/node": "18.11.9",
 # "nuxt": "^3.4.1"
 
-docker compose run --rm front pnpm install
+docker compose run --rm front sh -c "cd vue3_try && pnpm install"
 
 docker compose up front
 
 # でコンテナが起動されて、nuxtの起動できているか http://localhost:8030/ で動いているか確認する
+```
+
+viteの設定をdockerコンテナからの接続用に設定を行う
+`vite.config.ts`を以下のように設定
+
+```ts
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+    plugins: [vue()],
+    // ここで、host設定を行う
+    server: {
+        host: true,
+    },
+});
 ```

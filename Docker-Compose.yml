@@ -46,12 +46,12 @@ services:
       context: ./front  # build context の指定 Dockerfile の場所
       args:
         WORKDIR: $WORKDIR
-        CONTAINER_PORT: $CONTAINER_PORT
-    # command: pnpm run dev
+        FRONT_PORT_CONTAINER_SIDE: $FRONT_PORT_CONTAINER_SIDE
+    command: sh -c "cd vue3_try && pnpm run dev"
     volumes:
       - ./front:/$WORKDIR
     ports:
-      - "$FRONT_PORT:$CONTAINER_PORT"
+      - "$FRONT_PORT:$FRONT_PORT_CONTAINER_SIDE"
     depends_on:
       - api
 
