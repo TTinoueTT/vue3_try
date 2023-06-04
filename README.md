@@ -66,22 +66,30 @@ docker compose build api
 > そして、この設定でコンテナを再度起動
 `docker compose run --rm api rails db:create`
 
-### front ディレクトリに nuxt.js のプロジェクトを作成する
+### front ディレクトリに vue.js のプロジェクトを作成する
 
 > こちらも皆さんが実際には行わないものですが、vue.jsをインストールするまでの流れを確認しておいてください。
 > 先に、docker build でイメージを作成していることが前提で進みます
 
-> コンテナ起動
+コンテナ起動:
 
 ```sh
-docker compose run --rm front pnpx create-vite
+# docker compose run --rm front pnpx create-vite
+docker compose run --rm front npm init vue@latest
+
+# Project name → vue3_try
+# Add Typescript → Yes
+# Add JSX Support → No
+# Add Vue Router for Single Page Application development? → Yes
+# Add Pinia for state management? → Yes
+# Add Vitest for Unit Testing? → Yes
+# Add an End-to-End Testing Solution? › Cypress
+# Add ESLint for code quality? → Yes
+# Add Prettier for code formatting? → Yes
 
 
-# project name → vue3_try
-# vue
-# typescript
-
-docker compose run --rm front sh -c "cd vue3_try && pnpm install"
+# docker compose run --rm front sh -c "cd vue3_try && npm install"
+docker compose run --rm front npm install
 
 docker compose up front
 
@@ -103,4 +111,10 @@ export default defineConfig({
         host: true,
     },
 });
+```
+
+### Vue Router のインストール
+
+```sh
+
 ```
