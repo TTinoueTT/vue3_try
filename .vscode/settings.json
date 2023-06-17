@@ -29,35 +29,63 @@
         "editor.formatOnSave": true
     },
 
-    "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-        // "editor.wordWrap": "off",
-    },
-
-
-    "ruby.intellisense": "rubyLocate", // メソッドのリンク遷移
-
-    "[markdown]": {
-        "editor.formatOnSave": true,
-        // "editor.quickSuggestions": true,
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
-        // "editor.formatOnPaste": true
-        "editor.codeActionsOnSave": {
-            "source.fixAll.markdownlint": true
-        }
-    },
-    "markdownlint.run": "onSave",
-
-
-    "json.indent": "4",
-    "json.schemas": [
-        {
-            "fileMatch": [
-                "/myfile"
-            ],
-            "url": "schemaURL"
-        }
-
-    ]
+    // スペルチェックを行うファイル形式
+    "cSpell.enabledLanguageIds": [
+        "ruby",
+        "yml",
+        "yaml",
+        "scss",
+        "xml",
+        "shellscript",
+        "javascript",
+        "typescript",
+        "json",
+        "jsonc",
+        "vue"
+    ],
+    // 登録した単語
+    "cSpell.words": [
+        // 固有名詞・サービス名
+        "miroku",
+        "maya-reki",
+        "apollon",
+        "yamasaki",
+        "suisho",
+        "tamako",
+        "lovemedo",
+        "sekirara",
+        "ogushi",
+        "noriko",
+        "murano",
+        "hiromi",
+        "mkamaki",
+        "kinoshita",
+        "reon",
+        "hayatomo",
+        "kimura",
+        "fujiko",
+        "minori",
+        "rensa",
+        "docomo",
+        "rakuten",
+        "twiiter",
+        "youtuber",
+        // 変数・定数
+        "preresult",
+        "itemcd",
+        "itemcds",
+        // 日本語
+        "marokusatsu",
+        "shichusuimei",
+        "uranai",
+        "firin",
+        "fukuen",
+        // js・css・ライブラリ
+        "stylesheet",
+        "jquery",
+        "laravel",
+        "autoload"
+        // phpメソッド名
+    ],
+    "cSpell.ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"]
 }

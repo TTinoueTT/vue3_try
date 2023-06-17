@@ -1,0 +1,21 @@
+{
+    "recommendations": [
+        "rvest.vs-code-prettier-eslint",            // ESLint
+        "formulahendry.auto-close-tag",             // Auto Close Tag
+        "formulahendry.auto-rename-tag",            // Auto Rename Tag
+        "alefragnani.Bookmarks",                    // Bookmarks
+        "streetsidesoftware.code-spell-checker",    // Code Spell Checker
+        "ms-vscode-remote.remote-containers",       // Dev Containers
+        "ms-azuretools.vscode-docker",              // Docker
+        "EditorConfig.EditorConfig",                // EditorConfig for VS Code
+        "bierner.github-markdown-preview",          // Github Markdown Preview
+        "eamodio.gitlens",                          // GitLens -- Git supercharged
+        "oderwat.indent-rainbow",                   // indent-rainbow
+        "Asuka.insertnumbers",                      // Insert Numbers
+        "Meezilla.json",                            // JSON
+        "ms-vsliveshare.vsliveshare",               // Live Share
+        "esbenp.prettier-vscode",                   // Prettier - Code formatter
+        "mosapride.zenkaku",                        // zenkaku
+        "bung87.vscode-gemfile",                    // vscode-gemfile
+    ]
+}
