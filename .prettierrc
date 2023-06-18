@@ -1,0 +1,28 @@
+{
+    "printWidth": 700,                 // 行の最大長さを指定
+    "tabWidth": 4,                     // タブ文字の代わりに挿入されるスペースの数を指定
+    "useTabs": false,                  // インデントにタブを使用するかどうか
+    "semi": true,                      // 行の終わりにセミコロンを自動的に挿入するかどうか
+    "singleQuote": false,              // 文字列をシングルクォートで囲むか、ダブルクォートで囲むかを指定
+    "quoteProps": "as-needed",         // オブジェクトのプロパティをどのようにクォートするかを指定
+    "jsxSingleQuote": false,           // JSXでシングルクォートを使用するかどうかを指定
+    "trailingComma": "es5", // 末尾の","をどのように扱うかを指定 "es5"の場合、ES5でサポートされている場所には","
+    "bracketSpacing": true, // オブジェクトリテラルの中括弧 {} の内側にスペースを挿入するかどうかを指定します。trueの場合、スペースが挿入
+    "jsxBracketSameLine": false, // JSXの閉じタグを最後のプロパティと同じ行に配置するかどうかを指定します。falseの場合、閉じタグは新しい行に配置される
+    "arrowParens": "always", // 単一引数を持つアロー関数の引数をかっこで囲むかどうかを指定します。"always"の場合、常にかっこで囲う
+    "rangeStart": 0,
+    "filepath": "none",
+    "requirePragma": false,
+    "insertPragma": false,
+    "proseWrap": "preserve", // Markdownファイルでプロース（段落などの自由形式のテキスト）をどのように折り返すかを指定
+    "htmlWhitespaceSensitivity": "css", //  HTMLのホワイトスペースの扱い方を指定します。"css"の場合、CSSのwhite-spaceのように扱い
+    "vueIndentScriptAndStyle": false, // Vueファイルの<script>と<style>ブロックの内容をインデントするかどうかを指定
+    "endOfLine": "auto", // 改行文字の種類を指定します。"auto"の場合、改行文字は元の改行文字に保持される
+
+    "overrides": [  // 特定のファイルに対して異なる設定を適用するための設定
+        {
+            "files": ".prettierrc",
+            "options": { "parser": "json" }
+        }
+    ]
+}

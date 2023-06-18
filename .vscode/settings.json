@@ -24,7 +24,7 @@
         "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter",
         "editor.formatOnSave": true
     },
-    "[typescript][html][vue][json]": {
+    "[typescript][html][vue][json][markdown][ts][md]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
@@ -84,7 +84,8 @@
         "stylesheet",
         "jquery",
         "laravel",
-        "autoload"
+        "autoload",
+        "arrowParens"
         // phpメソッド名
     ],
     "cSpell.ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"]

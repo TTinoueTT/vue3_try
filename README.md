@@ -2,6 +2,15 @@
 
 Practice repository for vue3 and rails7 experimentation.
 
+## 目次
+
+1. [内容](#内容)
+1. [おすすめの実践内容](#おすすめの実践内容)
+1. [dockerコンテナのビルドについて](#dockerコンテナのビルドについて)
+    1. [rails API の作成](#rails API の作成)
+    1. [front ディレクトリに vue.js のプロジェクトを作成する](#front ディレクトリに vue.js のプロジェクトを作成する)
+    1. [Vue Router のインストール](#Vue Router のインストール)
+
 ## 内容
 
 > 基本的なことは
@@ -89,6 +98,10 @@ docker compose run --rm front npm init vue@latest
 
 
 # docker compose run --rm front sh -c "cd vue3_try && npm install"
+
+# package.json に追記
+# "dependencies" 内に "sass": "^1.63.4"を追記
+
 docker compose run --rm front npm install
 
 docker compose up front
@@ -111,10 +124,4 @@ export default defineConfig({
         host: true,
     },
 });
-```
-
-### Vue Router のインストール
-
-```sh
-
 ```
