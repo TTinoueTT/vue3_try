@@ -85,8 +85,48 @@
         "jquery",
         "laravel",
         "autoload",
-        "arrowParens"
+        "arrowParens",
+        "pinia",
         // phpメソッド名
     ],
-    "cSpell.ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"]
+    "cSpell.ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"],
+
+    "workbench.colorCustomizations": {
+        // 上のタイトルバーの設定
+        "titleBar.activeBackground": "#0c0309",
+        "titleBar.activeForeground": "#e4e4e4",
+        "titleBar.inactiveBackground": "#1c051599",
+        "titleBar.inactiveForeground": "#15202b99",
+
+        // 左横のアクティブバーの設定
+        "activityBar.activeBackground": "#0b0723",
+        "activityBar.background": "#0b0723",            // アクティビティバーの背景色
+        "activityBar.foreground": "#0e86ff",            // アイコンの色
+        "activityBar.inactiveForeground": "#e4e4e4",    // アクティブでない時の文字色
+        "activityBarBadge.background": "#ff5a51",       // 通知バッジの背景色
+        "activityBarBadge.foreground": "#15202b",       // 通知バッジの文字色
+
+        "commandCenter.border": "#15202b99",
+
+        "sash.hoverBorder": "#0b0723",
+
+        // 下のステータスバーの設定
+        "statusBar.background": "#0b0723",                  // "ワークスペースが開いていない時のステータスバー背景色"
+        "statusBar.foreground": "#e4e4e4",                  // " ワークスペースが開いていない時のステータスバー前景色"
+        // "statusBar.noFolderBackground": "フォルダーが開いていない時のステータスバー背景色",
+        "statusBarItem.hoverBackground": "#7729a1",         // ホバーした時の背景色
+        "statusBarItem.remoteBackground": "#0b0723",        //
+        "statusBarItem.remoteForeground": "#15202b",
+        // "statusBar.debuggingBackground": "プログラムをデバッグしている時の背景色",
+        // "statusBar.border": "ステータスバーの枠線",
+        // "statusBarItem.prominentBackground": "ステータスバー内で目立たせる項目に対する背景色",
+
+        // "editorGroupHeader.tabsBackground": "タブの背景色",
+        // "tab.activeBackground": "アクティブなタブの背景色",
+        // "tab.activeForeground": "アクティブなタブの文字色",
+        // "tab.border": "タブを区切るための境界線",
+        // "tab.activeBorder": "アクティブなタブの下の線",
+        // "tab.inactiveBackground": "非アクティブな色の背景色",
+        // "tab.inactiveForeground": "非アクティブなタブの文字色",
+    }
 }
