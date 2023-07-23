@@ -102,7 +102,7 @@
         "activityBar.activeBackground": "#0b0723",
         "activityBar.background": "#0b0723",            // アクティビティバーの背景色
         "activityBar.foreground": "#0e86ff",            // アイコンの色
-        "activityBar.inactiveForeground": "#e4e4e4",    // アクティブでない時の文字色
+        "activityBar.inactiveForeground": "#93f1a6",    // アクティブでない時の文字色
         "activityBarBadge.background": "#ff5a51",       // 通知バッジの背景色
         "activityBarBadge.foreground": "#15202b",       // 通知バッジの文字色
 
@@ -112,7 +112,7 @@
 
         // 下のステータスバーの設定
         "statusBar.background": "#0b0723",                  // "ワークスペースが開いていない時のステータスバー背景色"
-        "statusBar.foreground": "#e4e4e4",                  // " ワークスペースが開いていない時のステータスバー前景色"
+        "statusBar.foreground": "#93f1a6",                  // " ワークスペースが開いていない時のステータスバー前景色"
         // "statusBar.noFolderBackground": "フォルダーが開いていない時のステータスバー背景色",
         "statusBarItem.hoverBackground": "#7729a1",         // ホバーした時の背景色
         "statusBarItem.remoteBackground": "#0b0723",        //
