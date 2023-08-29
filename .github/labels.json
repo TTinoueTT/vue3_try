@@ -1,0 +1,114 @@
+[
+    {
+        "name": "bug",
+        "color": "D73A4A",
+        "aliases": [],
+        "description": "不具合の修正/何かが機能していない",
+        "delete": false
+    },
+    {
+        "name": "documentation",
+        "color": "0075CA",
+        "aliases": [],
+        "description": "ドキュメントの追加および修正",
+        "delete": false
+    },
+    {
+        "name": "duplicate",
+        "color": "CFD3D7",
+        "aliases": [],
+        "description": "この課題またはプルリクエストはすでに存在する",
+        "delete": false
+    },
+    {
+        "name": "enhancement",
+        "color": "A2EEEF",
+        "aliases": [],
+        "description": "新機能またはリクエスト",
+        "delete": false
+    },
+    {
+        "name": "good first issue",
+        "color": "7057FF",
+        "aliases": [],
+        "description": "初めて参加する人に最適",
+        "delete": false
+    },
+    {
+        "name": "help wanted",
+        "color": "008672",
+        "aliases": [],
+        "description": "特別な注意が必要",
+        "delete": false
+    },
+    {
+        "name": "invalid",
+        "color": "E4E669",
+        "aliases": [],
+        "description": "これはおかしい(正しいとは思えない)",
+        "delete": false
+    },
+    {
+        "name": "invalid",
+        "color": "E4E669",
+        "aliases": [],
+        "description": "これはおかしい(正しいとは思えない)",
+        "delete": false
+    },
+    {
+        "name": "performance",
+        "color": "CA1D2A",
+        "aliases": [],
+        "description": "サイトパフォーマンスの改善",
+        "delete": false
+    },
+    {
+        "name": "question",
+        "color": "D876E3",
+        "aliases": [],
+        "description": "更なる情報を求める",
+        "delete": false
+    },
+    {
+        "name": "question",
+        "color": "D876E3",
+        "aliases": [],
+        "description": "更なる情報を求める",
+        "delete": false
+    },
+    {
+        "name": "refactoring",
+        "color": "40B7A4",
+        "aliases": [],
+        "description": "既存のコードを修正し、保守性の改善",
+        "delete": false
+    },
+    {
+        "name": "wontfix",
+        "color": "ffffff",
+        "aliases": [],
+        "description": "これには取り組まない",
+        "delete": false
+    },
+    {
+        "name": "BREAKING CHANGE",
+        "color": "D93F0B",
+        "aliases": [],
+        "description": "重要な変更(アプリケーションの持続性に関与する)",
+        "delete": false
+    },
+    {
+        "name": "ci/cd",
+        "color": "83EA2C",
+        "aliases": [],
+        "description": "デプロイなど(コードとは直接関与しない)",
+        "delete": false
+    },
+    {
+        "name": "hotfix",
+        "color": "D93F0B",
+        "aliases": [],
+        "description": "緊急性の高い",
+        "delete": false
+    }
+]

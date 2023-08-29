@@ -24,21 +24,27 @@ services:
 
   api:
     build:
-      context: ./api  # build context の指定 Dockerfile の場所
+      context: ./api  # build context の指定 Dockerfileがあると想定される場所
+      # Dockerfile内の変数をオーバーライドするための引数を指定
       args:
-        WORKDIR: $WORKDIR
+        WORKDIR: $WORKDIR # WORKDIRという変数に$WORKDIRという環境変数の値を渡す
+    # コンテナ内の環境変数を設定
     environment:
-      MYSQL_DATABASE: $MYSQL_DATABASE
-      MYSQL_USER: $MYSQL_USER
-      MYSQL_PASSWORD: $MYSQL_PASSWORD
-      DB_PORT_CONTAINER_SIDE: $DB_PORT_CONTAINER_SIDE
+      MYSQL_DATABASE: $MYSQL_DATABASE # MySQLのデータベース名(環境変数から取得)
+      MYSQL_USER: $MYSQL_USER # ユーザ名(環境変数から取得)
+      MYSQL_PASSWORD: $MYSQL_PASSWORD # パスワード(環境変数から取得)
+      DB_PORT_CONTAINER_SIDE: $DB_PORT_CONTAINER_SIDE # コンテナ側のDBのポート番号(環境変数から取得)
+    # ファイル共有をするためのエンドポイント
     volumes:
-      - ./api:/$WORKDIR
+      - ./api:/$WORKDIR # ホスト側パス:コンテナ側パス
+    # 依存しているサービス名(dbコンテナの構築後にwebが派生)
     depends_on:
       - db
+    # ホストマシンとコンテナ間でポートをマッピング
     ports:
       - "$API_PORT:$CONTAINER_PORT"
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    # コンテナが起動する時に実行されるコマンド
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'" # 古いPIDファイルを削除してから、Railsサーバを起動
 
 
   front:

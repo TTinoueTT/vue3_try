@@ -1,0 +1,15 @@
+name: Update Labels
+on:
+  push:
+    branches: [ push_labels ]
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+    - name: Install dependencies
+      run: yarn add -D @azu/github-label-setup
+    - name: update label
+      run: yarn github-label-setup --token ${{ secrets.ISSUE_AND_PR_LABEL_FOR_ACCESS }} --labels .github/labels.json
